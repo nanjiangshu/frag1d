@@ -71,7 +71,7 @@ export DATADIR=$FRAG1D/data
 export BLASTBIN=$BINPATH
 export BLASTMAT=$DATADIR
 blastbin=$BLASTBIN
-blastdbname=nr
+blastdbname=uniref90.fasta
 dbname=nr30
 dbtype=1  #reading dumped database
 
