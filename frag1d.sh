@@ -88,7 +88,7 @@ Note: the supplied sequence should be in FASTA format
 
 Options:
  -cpu           INT  Set the number of cores to be used to run blastpgp
-                     (default: 1)
+                     (default: 8)
  -outpath       DIR  Output the result to the specified path, (default:./)
  -outname       STR  Output name, (default: query)
  -blastdb      FILE  Database for psi-blast, (default: nr)
@@ -306,7 +306,7 @@ outname=query
 seqFile=
 pssmFile=
 pssmFileListFile=
-numCPU=1
+numCPU=8
 
 isPrintVerboseInfo=0
 
