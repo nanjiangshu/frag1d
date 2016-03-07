@@ -20,16 +20,18 @@ Matching, Bioinformatics, 2010;26(4):470-477. (<sup>1</sup>Co-first author)
 ##Contact:
 Nanjiang Shu, Science for Life Laboratory, Stockholm
 Stockholm University, Sweden
-####Email: 
-nanjiang.shu@scilifelab.se
-nanjiang.shu@mmk.su.se
+####    Email: 
+
+    nanjiang.shu@scilifelab.se
+
+    nanjiang.shu@mmk.su.se
 
 ##Web-server
 The web server of Frag1D is available at 
 http://frag1d.bioshu.se
 
 
-##INSTALLATION:
+##Installation:
 
 Download the package by
 
@@ -84,14 +86,15 @@ In the subfolder `test`
 
 * Carry out the prediction by supplying a single sequence file in FASTA format
 
-    $ ../frag1d.sh test1.aa
+        $ ../frag1d.sh test1.aa
 
 * Carry out the prediction by supplying a single pssm file
-    $ ../frag1d.sh --pssm test2.pssm
+
+        $ ../frag1d.sh --pssm test2.pssm
 
 * Carry out the prediction by a list file with a number of sequence files
 
-    $ ../frag1d.sh --seqfilelist test3.seqfilelist
+        $ ../frag1d.sh --seqfilelist test3.seqfilelist
 
 
 ##Others:
