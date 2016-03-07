@@ -44,6 +44,7 @@ Enter the frag1d directory
 Fetch the data set by 
     
     $ git lfs fetch
+    $ git lfs checkout
 
 If you don't have git-lfs installed, please installed follow the instructions
 at https://git-lfs.github.com/
