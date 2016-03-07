@@ -22,9 +22,9 @@ Nanjiang Shu, Science for Life Laboratory, Stockholm
 Stockholm University, Sweden
 ####    Email: 
 
-    nanjiang.shu@scilifelab.se
+nanjiang.shu@scilifelab.se
 
-    nanjiang.shu@mmk.su.se
+nanjiang.shu@mmk.su.se
 
 ##Web-server
 The web server of Frag1D is available at 
@@ -41,7 +41,14 @@ Enter the frag1d directory
 
     $ cd frag1d
 
-Then run
+Fetch the data set by 
+    
+    $ git lfs fetch
+
+If you don't have git-lfs installed, please installed follow the instructions
+at https://git-lfs.github.com/
+
+After that, run
 
     $ make 
     $ make install

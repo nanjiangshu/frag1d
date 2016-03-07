@@ -20,6 +20,8 @@
 #define HAS_MYTEMPLATE_H
 
 #include "myfunc.h"
+#include <algorithm>
+using namespace std;
 
 template <class T> double Average(T *array, int low, int high);
 template <class T> void Swap(T* x1, T* x2);
