@@ -5,6 +5,7 @@ bak/
 *~
 *.swp
 *.swo
+*.bak
 
 build_hsrfrag
 checkfirst
