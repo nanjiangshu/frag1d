@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # split multiple sequences in the fasta file in individual files
 # one sequence per file
 import sys,re,os;
@@ -25,7 +25,7 @@ Examples:
 """
 
 def PrintHelp():
-    print(usage);
+    print usage;
 
 def GetSeqIDFromAnnotation(line):#{{{
 # get the ID from the annotation line of the fasta  file
@@ -55,9 +55,9 @@ def OutputSplittedSeq(seqWithAnno,cntSeq, rootname, outpath):#{{{
         fpout.write("%s\n" % seq);
         fpout.close();
         if not isQuiet:
-            print("%d\t%s output"%(cntSeq, outfile), file=sys.stdout);
+            print >> sys.stdout, "%d\t%s output"%(cntSeq, outfile);
     except:
-        print("Failed to open %s for write"%outfile, file=sys.stderr);
+        print >> sys.stderr ,"Failed to open %s for write"%outfile;
         exit(1);
 
 
@@ -156,22 +156,22 @@ if __name__ == '__main__' :
                 isNameFileSequentially=True;
                 i = i + 1;
             else:
-                print(("Error! Wrong argument:%s" % sys.argv[i]), file=sys.stderr);
+                print >> sys.stderr,("Error! Wrong argument:%s" % sys.argv[i]);
                 sys.exit(1);
         else:
             inFile=sys.argv[i];
             i+=1;
 
     if inFile == "":
-        print("Error! Input file not set.", file=sys.stderr);
+        print >> sys.stderr,"Error! Input file not set.";
 
     os.system("mkdir -p %s"%outpath);
 
     try :
         numSeq = SplitFasta(inFile,outpath);
         if not isQuiet:
-            print("%d sequences are splitted and output to %s"%(numSeq, outpath), file=sys.stdout);
+            print >> sys.stdout,"%d sequences are splitted and output to %s"%(numSeq, outpath);
 
     except :
-        print("except for the input file: %s" % inFile, file=sys.stderr);
+        print >>sys.stderr, "except for the input file: %s" % inFile;
         raise ;
