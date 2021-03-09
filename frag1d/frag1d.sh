@@ -291,6 +291,12 @@ RunFrag1D(){ #$outpath $pssmFileListFile $frag1dParaFile #{{{
         /bin/cp -f $TMPDIR/psiblast/*.pssm $outpath
         /bin/cp -f $TMPDIR/psiblast/*.chk $outpath
     fi
+
+    # ==== Step 6  =============
+    # generate output file in HTML format
+    exec_cmd "$BINPATH/txt2html.py $outpath/$outname.predfrag1d -o $outname.predfrag1d.html 1> /dev/null 2> $errFile"
+    CheckErrMsg $errFile
+    echo "  $outpath/$outname.predfrag1d.html"
 }
 #}}}
 
